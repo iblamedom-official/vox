@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Voxome</title>
+  <title>Space Anomaly</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -12,7 +12,13 @@
 <textarea id="codeEditor" class="editor" spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" oninput="render()"></textarea>
 <pre id="error"></pre>
 <div id="indicator"></div>
-
+<div id="controls">
+  <div class="controls">
+    <input id="btnToggleView" class="icon" type="checkbox" name="toggleView" onclick="toggleView()">
+    <input id="btnToggleResolution" class="icon" type="checkbox" name="toggleResolution" onchange="toggleResolution()">
+    <input id="btnReset" class="icon" type="checkbox" name="reset" onclick="reset()">
+  </div>
+</div>
 <script type="x-shader/x-fragment">#version 300 es
 /*********
 * made by Matthias Hurrle (@atzedent)
